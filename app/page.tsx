@@ -89,14 +89,11 @@ const skills = [
   { name: "REST APIs", type: "INTEGRATION", icon: Braces, color: "text-violet-300" },
 ];
 
-// Kontak Let's Talk Mann's Official
+// Ganti tiga nilai di bawah dengan kontak asli sebelum deploy.
 const contactLinks = {
-  // Nomor WhatsApp harus memakai kode negara, tanpa tanda + atau spasi.
-  whatsapp: "https://wa.me/6281385261360",
-  // Buka profil Telegram di browser; pengguna bisa lanjut ke aplikasi Telegram.
-  telegram: "https://t.me/manns_official",
-  // Buka halaman compose Gmail langsung, jadi tidak bergantung pada mailto handler.
-  email: "https://mail.google.com/mail/?view=cm&fs=1&to=manns.next.official%40gmail.com",
+  whatsapp: "https://wa.me/62XXXXXXXXXX",
+  telegram: "https://t.me/username",
+  email: "mailto:email@example.com",
 };
 
 const reveal = {
@@ -376,7 +373,7 @@ export default function Home() {
               onClick={() => { setMenuOpen(false); setTalkOpen(true); }}
               className="mt-2 flex w-full items-center justify-between rounded-xl border border-cyan-300/20 bg-cyan-300/[0.06] px-4 py-3 text-sm text-cyan-200 transition hover:bg-cyan-300/[0.12]"
             >
-              Let's Talk <ArrowUpRight size={16} />
+              {"Let's"} Talk <ArrowUpRight size={16} />
             </button>
           </div>
         )}
@@ -589,7 +586,7 @@ export default function Home() {
           </span>
         </motion.div>
 
-        <div className="grid gap-5 lg:grid-cols-2">
+        <div className="grid grid-cols-1 items-stretch gap-5 md:grid-cols-2 xl:grid-cols-3">
           {projects.map((project, index) => {
             const ProjectIcon = project.icon;
             const cyan = project.accent === "cyan";
@@ -602,9 +599,7 @@ export default function Home() {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true, amount: 0.15 }}
                 transition={{ duration: 0.6, delay: index * 0.12 }}
-                className={`group relative overflow-hidden rounded-[26px] border border-white/[0.09] bg-[#0d0f16] transition duration-500 hover:-translate-y-1 ${
-                  index === 2 ? "lg:col-span-2" : ""
-                }`}
+                className="group relative flex h-full flex-col overflow-hidden rounded-[26px] border border-white/[0.09] bg-[#0d0f16] transition duration-500 hover:-translate-y-1"
               >
                 <div
                   className={`pointer-events-none absolute -right-20 -top-28 h-64 w-64 rounded-full blur-[100px] transition duration-700 group-hover:opacity-100 ${
@@ -612,7 +607,7 @@ export default function Home() {
                   }`}
                 />
 
-                <div className="relative p-6 sm:p-9">
+                <div className="relative flex flex-1 flex-col p-6 sm:p-9">
                   <div className="flex items-center justify-between">
                     <span className="text-[10px] tracking-[0.2em] text-white/30">
                       PROJECT / {project.number}
@@ -746,7 +741,7 @@ export default function Home() {
           </p>
           <div className="flex flex-col justify-between gap-5 sm:flex-row sm:items-end">
             <h2 className="text-4xl font-semibold tracking-[-0.055em] sm:text-5xl">
-              Tools of the <span className="text-white/35">trade.</span>
+              Tools of the <span className="text-white/35">tech.</span>
             </h2>
             <p className="max-w-sm text-sm leading-7 text-white/40">
               Technologies I use or explore to bring digital ideas to life.
@@ -778,7 +773,7 @@ export default function Home() {
         </p>
       </section>
 
-      {/* LET'S TALK CTA */}
+      {/* {"LET'S"} TALK CTA */}
       <section className="relative mx-auto max-w-[1440px] px-5 pb-24 sm:px-8 lg:px-14 lg:pb-32">
         <motion.div
           initial={{ opacity: 0, y: 24 }}
@@ -795,14 +790,14 @@ export default function Home() {
                 <Zap size={14} /> 04 / OPEN CHANNEL
               </p>
               <h2 className="max-w-2xl text-4xl font-semibold leading-[1.1] tracking-[-0.06em] sm:text-6xl">
-                Have an idea?<br /><span className="text-white/40">Let's talk about it.</span>
+                Have an idea?<br /><span className="text-white/40">{"Let's"} talk about it.</span>
               </h2>
               <p className="mt-6 max-w-lg text-sm leading-7 text-white/45">
                 Got a project, collaboration, or just want to connect? Choose the channel that works best for you.
               </p>
             </div>
             <button type="button" onClick={() => setTalkOpen(true)} className="group inline-flex w-fit items-center gap-3 rounded-full bg-cyan-300 px-6 py-4 text-xs font-bold text-[#071014] transition hover:bg-cyan-200 hover:shadow-[0_0_35px_rgba(103,232,249,0.18)]">
-              <MessageCircle size={16} /> Let's Talk
+              <MessageCircle size={16} /> {"Let's"} Talk
               <ArrowRight size={15} className="transition group-hover:translate-x-1" />
             </button>
           </div>
@@ -831,26 +826,26 @@ export default function Home() {
                 <div className="mb-7 flex items-start justify-between gap-4">
                   <div>
                     <p className="mb-3 flex items-center gap-2 text-[9px] tracking-[0.25em] text-cyan-300"><span className="h-1.5 w-1.5 animate-pulse rounded-full bg-cyan-300" /> CONNECTION PORTAL</p>
-                    <h2 id="talk-modal-title" className="text-3xl font-semibold tracking-[-0.05em] sm:text-4xl">Let's talk<span className="text-cyan-300">.</span></h2>
-                    <p className="mt-3 max-w-sm text-sm leading-6 text-white/45">Pick your preferred channel. I'll be glad to hear from you.</p>
+                    <h2 id="talk-modal-title" className="text-3xl font-semibold tracking-[-0.05em] sm:text-4xl">{"Let's"} talk<span className="text-cyan-300">.</span></h2>
+                    <p className="mt-3 max-w-sm text-sm leading-6 text-white/45">Pick your preferred channel. {"I'll"} be glad to hear from you.</p>
                   </div>
                   <button type="button" onClick={() => setTalkOpen(false)} aria-label="Close contact modal" className="flex h-10 w-10 shrink-0 items-center justify-center rounded-full border border-white/10 text-white/60 transition hover:rotate-90 hover:border-white/25 hover:text-white"><X size={18} /></button>
                 </div>
                 <div className="grid gap-3">
-                  <a href={contactLinks.whatsapp} target="_blank" rel="noopener noreferrer" aria-label="Chat with Mann's Official on WhatsApp" className="group relative z-10 flex cursor-pointer items-center gap-4 rounded-2xl border border-emerald-300/15 bg-emerald-300/[0.04] p-4 transition duration-300 hover:-translate-y-0.5 hover:border-emerald-300/40 hover:bg-emerald-300/[0.08]">
+                  <a href={contactLinks.whatsapp} target="_blank" rel="noopener noreferrer" className="group flex items-center gap-4 rounded-2xl border border-emerald-300/15 bg-emerald-300/[0.04] p-4 transition duration-300 hover:-translate-y-0.5 hover:border-emerald-300/40 hover:bg-emerald-300/[0.08]">
                     <span className="flex h-12 w-12 items-center justify-center rounded-xl bg-emerald-300/10 text-emerald-300"><MessageCircle size={23} /></span>
                     <span className="min-w-0 flex-1"><span className="block text-sm font-medium">WhatsApp</span><span className="mt-1 block text-xs text-white/40">Direct message</span></span><ArrowUpRight size={17} className="text-white/35 transition group-hover:-translate-y-0.5 group-hover:translate-x-0.5 group-hover:text-emerald-300" />
                   </a>
-                  <a href={contactLinks.telegram} target="_blank" rel="noopener noreferrer" aria-label="Open Mann's Official Telegram profile" className="group relative z-10 flex cursor-pointer items-center gap-4 rounded-2xl border border-sky-300/15 bg-sky-300/[0.04] p-4 transition duration-300 hover:-translate-y-0.5 hover:border-sky-300/40 hover:bg-sky-300/[0.08]">
+                  <a href={contactLinks.telegram} target="_blank" rel="noopener noreferrer" className="group flex items-center gap-4 rounded-2xl border border-sky-300/15 bg-sky-300/[0.04] p-4 transition duration-300 hover:-translate-y-0.5 hover:border-sky-300/40 hover:bg-sky-300/[0.08]">
                     <span className="flex h-12 w-12 items-center justify-center rounded-xl bg-sky-300/10 text-sky-300"><Send size={22} /></span>
-                    <span className="min-w-0 flex-1"><span className="block text-sm font-medium">Telegram</span><span className="mt-1 block text-xs text-white/40">Let's connect there</span></span><ArrowUpRight size={17} className="text-white/35 transition group-hover:-translate-y-0.5 group-hover:translate-x-0.5 group-hover:text-sky-300" />
+                    <span className="min-w-0 flex-1"><span className="block text-sm font-medium">Telegram</span><span className="mt-1 block text-xs text-white/40">{"Let's"} connect there</span></span><ArrowUpRight size={17} className="text-white/35 transition group-hover:-translate-y-0.5 group-hover:translate-x-0.5 group-hover:text-sky-300" />
                   </a>
-                  <a href={contactLinks.email} target="_blank" rel="noopener noreferrer" aria-label="Compose an email to Mann's Official in Gmail" className="group relative z-10 flex cursor-pointer items-center gap-4 rounded-2xl border border-violet-300/15 bg-violet-300/[0.04] p-4 transition duration-300 hover:-translate-y-0.5 hover:border-violet-300/40 hover:bg-violet-300/[0.08]">
+                  <a href={contactLinks.email} className="group flex items-center gap-4 rounded-2xl border border-violet-300/15 bg-violet-300/[0.04] p-4 transition duration-300 hover:-translate-y-0.5 hover:border-violet-300/40 hover:bg-violet-300/[0.08]">
                     <span className="flex h-12 w-12 items-center justify-center rounded-xl bg-violet-300/10 text-violet-300"><Mail size={22} /></span>
                     <span className="min-w-0 flex-1"><span className="block text-sm font-medium">Gmail / Email</span><span className="mt-1 block text-xs text-white/40">Send me an email</span></span><ArrowUpRight size={17} className="text-white/35 transition group-hover:-translate-y-0.5 group-hover:translate-x-0.5 group-hover:text-violet-300" />
                   </a>
                 </div>
-                <p className="mt-6 text-center text-[10px] tracking-wide text-white/25">MANN'S OFFICIAL · OPEN TO GOOD IDEAS</p>
+                <p className="mt-6 text-center text-[10px] tracking-wide text-white/25">{"MANN'S"} OFFICIAL · OPEN TO GOOD IDEAS</p>
               </div>
             </motion.div>
           </motion.div>
