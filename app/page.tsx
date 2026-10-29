@@ -89,11 +89,14 @@ const skills = [
   { name: "REST APIs", type: "INTEGRATION", icon: Braces, color: "text-violet-300" },
 ];
 
-// Ganti tiga nilai di bawah dengan kontak asli sebelum deploy.
+// Kontak resmi MANN'S OFFICIAL
 const contactLinks = {
-  whatsapp: "https://wa.me/62XXXXXXXXXX",
-  telegram: "https://t.me/username",
-  email: "mailto:email@example.com",
+  // Format WhatsApp: kode negara + nomor, tanpa tanda "+" atau spasi.
+  whatsapp: "https://wa.me/6281385261360",
+  // Telegram membuka profil/chat berdasarkan username publik.
+  telegram: "https://t.me/manns_official",
+  // Membuka aplikasi email dengan alamat tujuan sudah terisi.
+  email: "mailto:manns.next.official@gmail.com",
 };
 
 const reveal = {
@@ -886,12 +889,6 @@ export default function Home() {
           <div className="order-3 flex flex-col gap-2 md:order-2 md:items-center">
             <p className="text-[10px] tracking-wide text-white/35">
               © {year ?? 2026} {"MANN'S"} OFFICIAL. All rights reserved.
-            </p>
-
-            <p className="flex items-center gap-1.5 text-[10px] text-white/25">
-              Crafted with
-              <span className="text-cyan-300">♥</span>
-              and curiosity.
             </p>
           </div>
 
